@@ -1,0 +1,169 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"10 C:\Users\leeee\Desktop\HW8_1\Timer2.c
+[v F1451 `(v  1 t 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+"16 C:\Users\leeee\Desktop\HW8_1\LCD_PortD.C
+[v _Wait_ms `(v  1 e 0 0 ]
+"25
+[v _LCD_Pause `(v  1 e 0 0 ]
+"32
+[v _LCD_Strobe `(v  1 e 0 0 ]
+"44
+[v _LCD_Inst `(v  1 e 0 0 ]
+"54
+[v _LCD_Move `(v  1 e 0 0 ]
+"62
+[v _LCD_Write `(v  1 e 0 0 ]
+"73
+[v _LCD_Init `(v  1 e 0 0 ]
+"10 C:\Users\leeee\Desktop\HW8_1\Timer2.c
+[v _IntServe `I(v  1 e 0 0 ]
+"23
+[v _LCD_Out `(v  1 e 0 0 ]
+"37
+[v _main `(v  1 e 0 0 ]
+"78 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
+[v _PR2 `Nuc  1 e 1 @4043 ]
+"79
+[v _T2CON `Nuc  1 e 1 @4042 ]
+"90
+[v _ADCON1 `Nuc  1 e 1 @4033 ]
+"117
+[v _TXREG `VNuc  1 e 1 @4013 ]
+"134
+[v _TRISD `VNuc  1 e 1 @3989 ]
+"136
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"137
+[v _TRISB `VNuc  1 e 1 @3987 ]
+"138
+[v _TRISA `VNuc  1 e 1 @3986 ]
+"148
+[v _PORTD `VNuc  1 e 1 @3971 ]
+"166
+[v _PEIE `Nb  1 e 0 @32662 ]
+"167
+[v _GIE `Nb  1 e 0 @32663 ]
+"402
+[v _TRMT `VNb  1 e 0 @32097 ]
+"464
+[v _TMR2IP `Nb  1 e 0 @31993 ]
+"476
+[v _TMR2IF `VNb  1 e 0 @31985 ]
+"488
+[v _TMR2IE `Nb  1 e 0 @31977 ]
+"617
+[v _RD1 `VNb  1 e 0 @31769 ]
+"618
+[v _RD2 `VNb  1 e 0 @31770 ]
+"619
+[v _RD3 `VNb  1 e 0 @31771 ]
+"627
+[v _RC0 `VNb  1 e 0 @31760 ]
+"637
+[v _RB0 `VNb  1 e 0 @31752 ]
+"638
+[v _RB1 `VNb  1 e 0 @31753 ]
+"639
+[v _RB2 `VNb  1 e 0 @31754 ]
+"648
+[v _RA1 `VNb  1 e 0 @31745 ]
+"4 C:\Users\leeee\Desktop\HW8_1\Timer2.c
+[v _TIME `ui  1 e 2 @1 ]
+"5
+[v _RUN `uc  1 e 1 @0 ]
+"37
+[v _main `(v  1 e 0 0 ]
+{
+"60
+} 0
+"54 C:\Users\leeee\Desktop\HW8_1\LCD_PortD.C
+[v _LCD_Move `(v  1 e 0 0 ]
+{
+[v _Row `uc  1 p 1 0 ]
+[v _Col `uc  1 p 1 1 ]
+"59
+} 0
+"23 C:\Users\leeee\Desktop\HW8_1\Timer2.c
+[v _LCD_Out `(v  1 e 0 0 ]
+{
+"24
+[v _i `uc  1 a 1 0 ]
+[v _A `[6]uc  1 a 6 1 ]
+"23
+[v _DATA `ui  1 p 2 0 ]
+[v _N `ui  1 p 2 2 ]
+"33
+} 7
+"73 C:\Users\leeee\Desktop\HW8_1\LCD_PortD.C
+[v _LCD_Init `(v  1 e 0 0 ]
+{
+"83
+} 0
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+{
+"6
+[v _counter `uc  1 a 1 0 ]
+"5
+[v _dividend `ui  1 p 2 0 ]
+[v _divisor `ui  1 p 2 2 ]
+"21
+} 1
+"44 C:\Users\leeee\Desktop\HW8_1\LCD_PortD.C
+[v _LCD_Inst `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"51
+} 0
+"62
+[v _LCD_Write `(v  1 e 0 0 ]
+{
+[v _c `uc  1 p 1 0 ]
+"69
+} 0
+"5 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\sources\lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+{
+"7
+[v _counter `uc  1 a 1 0 ]
+"6
+[v _quotient `ui  1 a 2 1 ]
+"5
+[v _dividend `ui  1 p 2 0 ]
+[v _divisor `ui  1 p 2 2 ]
+"26
+} 3
+"32 C:\Users\leeee\Desktop\HW8_1\LCD_PortD.C
+[v _LCD_Strobe `(v  1 e 0 0 ]
+{
+"39
+} 0
+"16
+[v _Wait_ms `(v  1 e 0 0 ]
+{
+"17
+[v _i `ui  1 a 2 0 ]
+[v _j `ui  1 a 2 2 ]
+"16
+[v _X `ui  1 p 2 0 ]
+"21
+} 4
+"25
+[v _LCD_Pause `(v  1 e 0 0 ]
+{
+"26
+[v _x `uc  1 a 1 0 ]
+"28
+} 1
+"10 C:\Users\leeee\Desktop\HW8_1\Timer2.c
+[v _IntServe `I(v  1 e 0 0 ]
+{
+"19
+} 0

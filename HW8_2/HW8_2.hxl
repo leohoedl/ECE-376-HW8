@@ -1,0 +1,31 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  0h - 7FFh
+  804h - 807h
+  81Ch - FFFh
+  10DCh - 10FFh
+  
+ HW8_2.hex ranges:
+  800h - 803h
+  808h - 81Bh
+  1000h - 10DBh
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = HW8_2.hex
+00000000: ----------------------------------------------------------------
+00000800: 1111----11111111111111111111------------------------------------
+00001000: 1111111111111111111111111111111111111111111111111111111111111111
+00001040: 1111111111111111111111111111111111111111111111111111111111111111
+00001080: 1111111111111111111111111111111111111111111111111111111111111111
+000010C0: 1111111111111111111111111111------------------------------------

@@ -1,0 +1,17 @@
+_srand: CODE, 6580 0 30
+_Wait_ms: CODE, 6262 0 126
+_LCD_Inst: CODE, 6388 0 78
+_IntServe: CODE, 5162 0 188
+___lmul: CODE, 5534 0 164
+_main: CODE, 4140 0 466
+_LCD_Out: CODE, 4606 0 292
+___awmod: CODE, 4898 0 264
+_LCD_Move: CODE, 6130 0 132
+_LCD_Strobe: CODE, 6610 0 20
+_LCD_Pause: CODE, 6526 0 54
+___lwdiv: CODE, 5350 0 184
+_LCD_Write: CODE, 6466 0 60
+_LCD_Init: CODE, 5850 0 146
+_rand: CODE, 5996 0 134
+___lwmod: CODE, 5698 0 152
+Total: 2490

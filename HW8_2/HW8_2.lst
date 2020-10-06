@@ -1,0 +1,425 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Mon Mar 23 15:40:19 2020
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F4620
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           	GLOBAL	__activetblptr
+   102  000000                     __activetblptr	EQU	3
+   103                           	GLOBAL	__smallconst,__Lsmallconst
+   104  000000                     __smallconst	EQU	__Lsmallconst
+   105                           	GLOBAL	__mediumconst,__Lmediumconst
+   106  000000                     __mediumconst	EQU	__Lmediumconst
+   107                           	GLOBAL	__Ldata
+   108  000000                     __Ldata	EQU	0
+   109                           ;Data sizes: Strings 0, constant 2, data 0, bss 
+                                 0, persistent 0 stack 14
+   110                           	global	_main
+   111                           	global	??_main
+   112                           	global	?_main
+   113                                   psect   text0,class=CODE,space=0,reloc=2
+   114                           
+   115                           	opt lm
+   116                           	file	"C:\Users\leeee\Desktop\HW8_2\1KeyPiano.c"
+   117                           	line	26
+   118  000000                     	__size_of_main	equ	__end_of_main-_main
+   119                           ;1KeyPiano.c: 25: void main(void)
+   120                           ;1KeyPiano.c: 26: {
+   121                           	
+   122  00107E                     _main:		; BSR set to: ?
+   123                           
+   124                           	opt stack 30
+   125                           	line	28
+   126  00107E  0E00               	movlw	low(0)
+   127  001080  6E92               	movwf	((c:3986)),c	;volatile
+   128                           	line	29
+   129                           ;1KeyPiano.c: 29: TRISB = 0xFF;
+   130  001082  6893               	setf	((c:3987)),c	;volatile
+   131                           	line	30
+   132                           ;1KeyPiano.c: 30: TRISC = 0;
+   133  001084  0E00               	movlw	low(0)
+   134  001086  6E94               	movwf	((c:3988)),c	;volatile
+   135                           	line	31
+   136                           ;1KeyPiano.c: 31: TRISD = 0;
+   137  001088  0E00               	movlw	low(0)
+   138  00108A  6E95               	movwf	((c:3989)),c	;volatile
+   139                           	line	32
+   140                           ;1KeyPiano.c: 32: TRISE = 0;
+   141  00108C  0E00               	movlw	low(0)
+   142  00108E  6E96               	movwf	((c:3990)),c	;volatile
+   143                           	line	33
+   144                           ;1KeyPiano.c: 33: ADCON1 = 15;
+   145  001090  0100               	movlb	0	; () banked
+   146  001092  6FF2               	movwf	(??_main+0+0)&0ffh
+   147  001094  0E0F               	movlw	low(0Fh)
+   148  001096  6EC1               	movwf	((c:4033)),c
+   149  001098  0100               	movlb	0	; () banked
+   150  00109A  51F2               	movf	(??_main+0+0)&0ffh,w
+   151                           	line	36
+   152                           ;1KeyPiano.c: 36: TMR2ON = 1;
+   153  00109C  84CA               	bsf	c:(32338/8),(32338)&7
+   154                           	line	37
+   155                           ;1KeyPiano.c: 37: TMR2IE = 1;
+   156  00109E  829D               	bsf	c:(31977/8),(31977)&7
+   157                           	line	38
+   158                           ;1KeyPiano.c: 38: PEIE = 1;
+   159  0010A0  8CF2               	bsf	c:(32662/8),(32662)&7
+   160                           	line	39
+   161                           ;1KeyPiano.c: 39: T2CON = 0x7F;
+   162  0010A2  0100               	movlb	0	; () banked
+   163  0010A4  6FF2               	movwf	(??_main+0+0)&0ffh
+   164  0010A6  0E7F               	movlw	low(07Fh)
+   165  0010A8  6ECA               	movwf	((c:4042)),c
+   166  0010AA  0100               	movlb	0	; () banked
+   167  0010AC  51F2               	movf	(??_main+0+0)&0ffh,w
+   168                           	line	40
+   169                           ;1KeyPiano.c: 40: PR2 = 49;
+   170  0010AE  0100               	movlb	0	; () banked
+   171  0010B0  6FF2               	movwf	(??_main+0+0)&0ffh
+   172  0010B2  0E31               	movlw	low(031h)
+   173  0010B4  6ECB               	movwf	((c:4043)),c
+   174  0010B6  0100               	movlb	0	; () banked
+   175  0010B8  51F2               	movf	(??_main+0+0)&0ffh,w
+   176                           	line	41
+   177                           ;1KeyPiano.c: 41: GIE = 1;
+   178  0010BA  8EF2               	bsf	c:(32663/8),(32663)&7
+   179                           	line	43
+   180                           ;1KeyPiano.c: 43: while(1) {
+   181                           	
+   182  0010BC                     l173:		; BSR set to: ?
+   183                           
+   184                           	line	44
+   185                           ;1KeyPiano.c: 44: if (RB0) PR2 = B3;
+   186  0010BC  A081               	btfss	c:(31752/8),(31752)&7	;volatile
+   187  0010BE  D001               	goto	u111
+   188  0010C0  D001               	goto	u110
+   189  0010C2                     u111:
+   190  0010C2  D009               	goto	l172
+   191  0010C4                     u110:
+   192  0010C4  0E01               	movlw	low((_B3))
+   193  0010C6  6EF6               	movwf	tblptrl
+   194  0010C8  0E10               	movlw	high((_B3))
+   195  0010CA  6EF7               	movwf	tblptrh
+   196  0010CC  0E00               	movlw	low highword((_B3))
+   197  0010CE  6EF8               	movwf	tblptru
+   198  0010D0  0008               	tblrd	*
+   199                           	
+   200  0010D2  CFF5 FFCB          	movff	tablat,(c:4043)
+   201                           	
+   202  0010D6                     l175:		; BSR set to: ?
+   203                           
+   204                           	line	45
+   205                           	
+   206  0010D6                     l172:		; BSR set to: ?
+   207                           
+   208                           	line	43
+   209  0010D6  D7F2               	goto	l173
+   210                           	global	start
+   211  0010D8  EF0C  F004         	goto	start
+   212                           	opt stack 0
+   213                           GLOBAL __end_of_main
+   214  0010DC                     	__end_of_main:
+   215                           	FNSIZE	_main,1,0
+   216                           ; =============== function _main ends ==========
+                                 ==
+   217                           
+   218                                   psect   text1,class=CODE,space=0,reloc=2
+   219                           	line	47
+   220                           
+   221                           	opt lm
+   222                           	signat	_main,88
+   223                           	global	_IntServe
+   224                           	global	??_IntServe
+   225                           	global	?_IntServe
+   226                           	file	"C:\Users\leeee\Desktop\HW8_2\1KeyPiano.c"
+   227                           	line	8
+   228  000000                     	__size_of_IntServe	equ	__end_of_IntServe-_IntSe
+                                 rve
+   229                           ;1KeyPiano.c: 7: void interrupt IntServe(void)
+   230                           ;1KeyPiano.c: 8: {
+   231                           	
+   232  001004                     _IntServe:		; BSR set to: ?
+   233                           
+   234  001004  0006               	pop	; remove dummy address from shadow register
+                                  refresh
+   235                           
+   236                           	opt stack 31
+   237                                   psect   intcode,class=CODE,space=0,reloc
+                                 =2
+   238                           	global	int_func
+   239  000808                     int_func:
+   240                                   psect   intcode
+   241  000808  CFFA F0F3          	movff	pclat+0,??_IntServe+0
+   242  00080C  CFFB F0F4          	movff	pclat+1,??_IntServe+1
+   243  000810  CFE9 F0F5          	movff	fsr0l+0,??_IntServe+2
+   244  000814  ED02  F008         	call	_IntServe,f	;refresh shadow registers
+   245                                   psect   text1
+   246  001006  CFEA F0F6          	movff	fsr0h+0,??_IntServe+3
+   247  00100A  CFE1 F0F7          	movff	fsr1l+0,??_IntServe+4
+   248  00100E  CFE2 F0F8          	movff	fsr1h+0,??_IntServe+5
+   249  001012  CFD9 F0F9          	movff	fsr2l+0,??_IntServe+6
+   250  001016  CFDA F0FA          	movff	fsr2h+0,??_IntServe+7
+   251  00101A  CFF3 F0FB          	movff	prodl+0,??_IntServe+8
+   252  00101E  CFF4 F0FC          	movff	prodh+0,??_IntServe+9
+   253  001022  CFF6 F0FD          	movff	tblptrl+0,??_IntServe+10
+   254  001026  CFF7 F0FE          	movff	tblptrh+0,??_IntServe+11
+   255  00102A  CFF8 F0FF          	movff	tblptru+0,??_IntServe+12
+   256                           	line	9
+   257                           ;1KeyPiano.c: 9: if (TMR2IF) {
+   258  00102E  A29E               	btfss	c:(31985/8),(31985)&7	;volatile
+   259  001030  D001               	goto	i2u91
+   260  001032  D001               	goto	i2u90
+   261  001034                     i2u91:
+   262  001034  D009               	goto	i2l167
+   263  001036                     i2u90:
+   264                           	line	10
+   265                           ;1KeyPiano.c: 10: if(PORTB) RC0 = !RC0;
+   266  001036  5081               	movf	((c:3969)),c,w	;volatile
+   267  001038  B4D8               	btfsc	status,2
+   268  00103A  D001               	goto	i2u101
+   269  00103C  D001               	goto	i2u100
+   270  00103E                     i2u101:
+   271  00103E  D002               	goto	i2l168
+   272  001040                     i2u100:
+   273  001040  7082               	btg	c:(31760/8),(31760)&7	;volatile
+   274  001042  D001               	goto	i2l169
+   275                           	line	11
+   276                           	
+   277  001044                     i2l168:		; BSR set to: ?
+   278                           
+   279                           ;1KeyPiano.c: 11: else RC0 = 0;
+   280  001044  9082               	bcf	c:(31760/8),(31760)&7	;volatile
+   281                           	
+   282  001046                     i2l169:		; BSR set to: ?
+   283                           
+   284                           	line	12
+   285                           ;1KeyPiano.c: 12: TMR2IF = 0;
+   286  001046  929E               	bcf	c:(31985/8),(31985)&7	;volatile
+   287                           	line	13
+   288                           	
+   289  001048                     i2l167:		; BSR set to: ?
+   290                           
+   291                           	line	14
+   292                           ;1KeyPiano.c: 13: }
+   293                           ;1KeyPiano.c: 14: }
+   294  001048                     i2l166:
+   295                           			; BSR set to: ?
+   296                           
+   297  001048  C0FF  FFF8         	movff	??_IntServe+12,tblptru+0
+   298  00104C  C0FE  FFF7         	movff	??_IntServe+11,tblptrh+0
+   299  001050  C0FD  FFF6         	movff	??_IntServe+10,tblptrl+0
+   300  001054  C0FC  FFF4         	movff	??_IntServe+9,prodh+0
+   301  001058  C0FB  FFF3         	movff	??_IntServe+8,prodl+0
+   302  00105C  C0FA  FFDA         	movff	??_IntServe+7,fsr2h+0
+   303  001060  C0F9  FFD9         	movff	??_IntServe+6,fsr2l+0
+   304  001064  C0F8  FFE2         	movff	??_IntServe+5,fsr1h+0
+   305  001068  C0F7  FFE1         	movff	??_IntServe+4,fsr1l+0
+   306  00106C  C0F6  FFEA         	movff	??_IntServe+3,fsr0h+0
+   307  001070  C0F5  FFE9         	movff	??_IntServe+2,fsr0l+0
+   308  001074  C0F4  FFFB         	movff	??_IntServe+1,pclat+1
+   309  001078  C0F3  FFFA         	movff	??_IntServe+0,pclat+0
+   310  00107C  0011               	retfie f
+   311                           	opt stack 0
+   312                           GLOBAL __end_of_IntServe
+   313  00107E                     	__end_of_IntServe:
+   314                           	FNSIZE	_IntServe,13,0
+   315                           ; =============== function _IntServe ends ======
+                                 ======
+   316                           
+   317                           	signat	_IntServe,88
+   318                           	FNROOT	_main
+   319                           	FNCALL	intlevel2,_IntServe
+   320                           	global	intlevel2
+   321                           	FNROOT	intlevel2
+   322                                   psect   smallconst,class=SMALLCONST,spac
+                                 e=0,reloc=2
+   323  001000  00                 	db	0	;reserve
+   324                           	global	_B3
+   325                           	line	2
+   326  001001                     _B3:
+   327  001001  0080               	dw	(080h)&0ffffh
+   328                           	global	_B3
+   329                           	global	_ADCON1
+   330  000000                     _ADCON1	equ	0xFC1
+   331                           	global	_PORTB
+   332  000000                     _PORTB	equ	0xF81
+   333                           	global	_PORTD
+   334  000000                     _PORTD	equ	0xF83
+   335                           	global	_PR2
+   336  000000                     _PR2	equ	0xFCB
+   337                           	global	_T2CON
+   338  000000                     _T2CON	equ	0xFCA
+   339                           	global	_TRISA
+   340  000000                     _TRISA	equ	0xF92
+   341                           	global	_TRISB
+   342  000000                     _TRISB	equ	0xF93
+   343                           	global	_TRISC
+   344  000000                     _TRISC	equ	0xF94
+   345                           	global	_TRISD
+   346  000000                     _TRISD	equ	0xF95
+   347                           	global	_TRISE
+   348  000000                     _TRISE	equ	0xF96
+   349                           	global	_TXREG
+   350  000000                     _TXREG	equ	0xFAD
+   351                           	global	_GIE
+   352  000000                     _GIE	equ	0x7F97
+   353                           	global	_PEIE
+   354  000000                     _PEIE	equ	0x7F96
+   355                           	global	_RB0
+   356  000000                     _RB0	equ	0x7C08
+   357                           	global	_RC0
+   358  000000                     _RC0	equ	0x7C10
+   359                           	global	_RD1
+   360  000000                     _RD1	equ	0x7C19
+   361                           	global	_RD2
+   362  000000                     _RD2	equ	0x7C1A
+   363                           	global	_RD3
+   364  000000                     _RD3	equ	0x7C1B
+   365                           	global	_TMR2IE
+   366  000000                     _TMR2IE	equ	0x7CE9
+   367                           	global	_TMR2IF
+   368  000000                     _TMR2IF	equ	0x7CF1
+   369                           	global	_TMR2ON
+   370  000000                     _TMR2ON	equ	0x7E52
+   371                           	global	_TRMT
+   372  000000                     _TRMT	equ	0x7D61
+   373  001003  00                 	db 0	; dummy byte at the end
+   374                           	psect	intsave_regs,class=BIGRAM,space=1
+   375                           	PSECT	param0,class=BANK0,space=1
+   376                           	GLOBAL	__Lparam0
+   377                           	FNCONF	param0,??,?
+   378                           GLOBAL	__Lparam, __Hparam
+   379                           GLOBAL	__Lparam0, __Hparam0
+   380  000000                     __Lparam	EQU	__Lparam0
+   381  000000                     __Hparam	EQU	__Hparam0
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Mon Mar 23 15:40:19 2020
+
+               _B3 1001                l172 10D6                l173 10BC  
+              l175 10D6                _GIE 007F97                _RB0 007C08  
+              _RC0 007C10                _RD1 007C19                _RD2 007C1A  
+              _RD3 007C1B                u110 10C4                u111 10C2  
+              _PR2 000FCB               _PEIE 007F96               i2u90 1036  
+             i2u91 1034               _TRMT 007D61               _main 107E  
+             fsr0h 000FEA               fsr1h 000FE2               fsr0l 000FE9  
+             fsr2h 000FDA               fsr1l 000FE1               fsr2l 000FD9  
+             pclat 000FFA               prodh 000FF4               prodl 000FF3  
+             start 0818              ?_main 00F2              _T2CON 000FCA  
+            i2l166 1048              i2l167 1048              i2l168 1044  
+            i2l169 1046              i2u100 1040              i2u101 103E  
+            _PORTB 000F81              _PORTD 000F83              _TRISA 000F92  
+            _TRISB 000F93              _TRISC 000F94              _TRISD 000F95  
+            _TRISE 000F96              _TXREG 000FAD              tablat 000FF5  
+            status 000FD8       __end_of_main 10DC   __end_of_IntServe 107E  
+           ??_main 00F2      __activetblptr 000003             _ADCON1 000FC1  
+           _TMR2IE 007CE9             _TMR2IF 007CF1             _TMR2ON 007E52  
+           __Ldata 000000       __mediumconst 1004             tblptrh 000FF7  
+           tblptrl 000FF6             tblptru 000FF8         __accesstop 0080  
+        ?_IntServe 00F3         ??_IntServe 00F3            __Hparam 0100  
+          __Lparam 00F2            __ramtop 1000      __Lmediumconst 1004  
+          int_func 0808        __smallconst 1000           _IntServe 1004  
+         __Hparam0 0100           __Lparam0 00F2       __Lsmallconst 1000  
+         intlevel2 10DC  
